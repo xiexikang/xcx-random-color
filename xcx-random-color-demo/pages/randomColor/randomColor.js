@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+
     //标签云
-    labArr: ['曾小贤', '胡一菲', '吕子乔', '陈美嘉', '唐悠悠','关谷神奇','张益达','诺澜','雨墨','陆展博'],
+    labArr: ['曾小贤', '胡一菲', '吕子乔', '陈美嘉', '唐悠悠', '关谷神奇', '张益达', '诺澜', '雨墨', '陆展博'],
 
     // 自定义自己喜欢的颜色
     colorArr: ["#EE2C2C", "#ff7070", "#EEC900", "#4876FF", "#ff6100",
@@ -24,20 +24,19 @@ Page({
    */
   onLoad: function (options) {
     let that = this,
-        labLen = that.data.labArr.length,
-        colorArr = that.data.colorArr,
-        colorLen = colorArr.length,
-        newArr = [];
-    // 不能只执行一次，要执行多次(labLen次)
-    //要获取跟数据同等个数的随机颜色值
-    while (labLen > 0) {
-      // 获取随机颜色
+      labLen = that.data.labArr.length,
+      colorArr = that.data.colorArr,
+      colorLen = colorArr.length,
+      randomColorArr = [];
+    //判断执行
+    do {
       let random = colorArr[Math.floor(Math.random() * colorLen)];
-      newArr.push(random);
+      randomColorArr.push(random);
       labLen--;
-    }
-    that.setData({ 
-      randomColor: newArr 
+    } while (labLen > 0)
+
+    that.setData({
+      randomColor: randomColorArr
     });
   },
 
@@ -47,48 +46,48 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
