@@ -1,2 +1,2 @@
-# xcx-random-color
-小程序：标签云，自定义颜色，随机显示.....
+## **效果展示图**
+![效果图](http://wx1.sinaimg.cn/mw690/6ecf2da3gy1ftv6e9mvuvj20ae0eb3yn.jpg)
