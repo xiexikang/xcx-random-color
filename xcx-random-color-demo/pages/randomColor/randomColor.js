@@ -16,7 +16,7 @@ Page({
       "#66CDAA", "#00CED1", "#9F79EE", "#CD3333", "#FFC125", "#32CD32",
       "#00BFFF", "#68A2D5", "#FF69B4", "#DB7093", "#CD3278", "#607B8B"],
     // 随机颜色数组
-    randomColor: []
+    randomColorArr: []
   },
 
   /**
@@ -36,7 +36,7 @@ Page({
     } while (labLen > 0)
 
     that.setData({
-      randomColor: randomColorArr
+      randomColorArr: randomColorArr
     });
   },
 
